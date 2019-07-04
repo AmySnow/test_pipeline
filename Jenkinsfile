@@ -6,7 +6,7 @@ pipeline {
             steps{
                 script{
                      sh "echo ${VERSION}"
-
+                     sh "env.VERSION"
                      assert '' != env.VERSION :'Invalid paramseter WORK_HOME'
                      assert '' != params.CONTAINER_NAME :'Invalid paramseter CONTAINER_NAME'
                      assert '' != params.IP :'Invalid paramseter IP'
