@@ -21,7 +21,7 @@ pipeline {
            steps{
                script{
 
-                    echo ${MAP}.replaceAll(" ", " \\-e " )
+                    echo '123455'
 
                }
            }
