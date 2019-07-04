@@ -5,7 +5,8 @@ pipeline {
         stage('Check Parameter') {
             steps{
                 script{
-                    sh  "echo params.VERSION"
+                    sh  "echo 11111111111111"
+                    sh  "echo ${VERSION}"
                      assert '' != params.VERSION :'Invalid parameter WORK_HOME'
                      assert '' != params.CONTAINER_NAME :'Invalid parameter CONTAINER_NAME'
                      assert '' != params.IP :'Invalid parameter IP'
