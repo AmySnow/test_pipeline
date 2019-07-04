@@ -23,7 +23,7 @@ pipeline {
 
                     var = ${MAP}.replaceAll(" ", " \\-e " )
                      sh '''
-                     ssh root@10.15.46.184 "docker inspect --format={{.ID}}  ${CONTAINER_NAME}  2> /dev/null; if( $? -eq 0) then echo 123 ;fi;sleep 10;"
+                     ssh root@10.15.46.184 'echo -e "docker inspect --format={{.ID}}  ${CONTAINER_NAME}  2> /dev/null; if( $? -eq 0) then echo 123 ;fi;sleep 10;"'
                      ssh root@10.15.46.184 'echo -e "docker run --name ${CONTAINER_NAME} var -v ${CONTAINER_TIME} --restart ${RESTART} -p ${PORT} -d ${MIRROR_IMAGE}${CONTAINER_NAME}:${VERSION}" '
                      '''
                     
