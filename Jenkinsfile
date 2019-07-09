@@ -21,7 +21,7 @@ pipeline {
            steps{
                script{
                    println "123"
-                   println  MAP.split('\\,')
+                   println  """ MAP.split("\\,")"""
 
                }
            }
