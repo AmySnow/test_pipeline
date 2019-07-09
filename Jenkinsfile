@@ -23,7 +23,9 @@ pipeline {
                    def VarMap =  MAP.split('\\ ')
                    def VarM = ''
                    for(int i=0; i<VarMap.size(); i++ ) {
-                        assert '' != VarMap[i] : VarM = VarM + ' -e ' + VarMap[i]
+                       if (VarMap[i] !='') {
+                           VarM = VarM + ' -e ' + VarMap[i]
+                       }
                    }
                    println(VarM);
 
