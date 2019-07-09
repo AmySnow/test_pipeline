@@ -20,8 +20,12 @@ pipeline {
        stage('Deploy') {
            steps{
                script{
-                   println "123"
-                   println  MAP.split("\\,")
+                   def VarMap =  MAP.split(",")
+                   def VarM = ''
+                   for(int i=0; i<VarMap.size(); i++ ) {
+                        def VarM = VarM + '-e' + VarMap[i]
+                   }
+                   println(VarM);
 
                }
            }
