@@ -20,7 +20,7 @@ pipeline {
        stage('Deploy') {
            steps{
                script{
-                     echo  MAP.split('\\ ')                     
+                     println  MAP.split('\\ ')                     
 
                }
            }
