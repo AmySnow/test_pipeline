@@ -23,7 +23,7 @@ pipeline {
                    def VarMap =  MAP.split(",")
                    def VarM = ''
                    for(int i=0; i<VarMap.size(); i++ ) {
-                        def VarM = VarM + '-e' + VarMap[i]
+                        VarM = VarM + '-e' + VarMap[i]
                    }
                    println(VarM);
 
