@@ -20,7 +20,7 @@ pipeline {
        stage('Deploy') {
            steps{
                script{
-                   def VarMap =  MAP.split('')
+                   def VarMap =  MAP.split('\\ ')
                    def VarM = ''
                    for(int i=0; i<VarMap.size(); i++ ) {
                         VarM = VarM + ' -e ' + VarMap[i]
